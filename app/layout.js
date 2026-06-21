@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
@@ -12,7 +13,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
+export const metadata = {
+  title: "Home",
+  description: "Law Anatomy Home Page...!!",
+  verification: {
+    google: "KL_q4s6Wiiy47LxHLrIotAra63IZLYSwORslDQsUS_s",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -20,9 +27,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <GoogleTagManager gtmId="GTM-XYZ" />
       <body className="min-h-full flex flex-col w-[90%] mx-auto">
         <header>
-          <Header/>
+          <Header />
         </header>
         <main>{children}</main>
       </body>
