@@ -1,4 +1,4 @@
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager,GoogleAnalytics } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         </header>
         <main>{children}</main>
       </body>
+        <GoogleAnalytics gaId="G-VS5KK9R9CF" />
     </html>
   );
 }
