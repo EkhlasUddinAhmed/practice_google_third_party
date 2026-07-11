@@ -1,3 +1,5 @@
+import { auth } from "@/auth";
+import AllStudentsComponent from "@/components/AllStudentsComponent/AllStudentsComponent";
 import SendEvent from "@/components/SendEvent/SendEvent";
 
 export const metadata = {
@@ -5,11 +7,14 @@ export const metadata = {
   description: "Law Anatomy Home Page...!!",
 };
 
-const HomePage = () => {
+const HomePage = async() => {
+  const session=await auth();
+  console.log({session})
   return (
     <>
       <h1>helooo belal..................</h1>
       <SendEvent/>
+      < AllStudentsComponent/>
     </>
   );
 };

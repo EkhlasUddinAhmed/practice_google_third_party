@@ -1,4 +1,5 @@
 import ButtonClickNavigate from "@/components/ButtonClickNavigate/ButtonClickNavigate";
+import GeminiModalShow from "@/components/GEMINIModal/GeminiModalShow";
 import React from "react";
 
 export const metadata = {
@@ -15,6 +16,7 @@ const SettingsPage = () => {
       <div>
         <ButtonClickNavigate href="/">Go to Home</ButtonClickNavigate>
       </div>
+      <GeminiModalShow/>
     </div>
   );
 };
